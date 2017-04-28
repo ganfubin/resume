@@ -43,6 +43,8 @@ export default {
   .pre-code{
      height: 100%;
      margin: 0;
+     font-size: 12px;
+     line-height: 20px;
   }
 
 </style>

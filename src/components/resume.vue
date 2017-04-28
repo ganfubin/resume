@@ -207,5 +207,18 @@ export default {
 	}
 	.resume-right .project-exp .project-exp-container{
 		padding: 15px 15px 0 15px;
-	}*/
+	}
+	label.project-name {
+	    background: #aaa;
+	    width: 100%;
+	    display: block;
+	    padding: 5px;
+	}
+	.project-desc{
+		font-size: 14px;
+	    line-height: 20px;
+	    padding: 15px 15px 0 15px;
+	    text-indent: 10px;
+	}
+	*/
 </style>
