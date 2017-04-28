@@ -1,7 +1,7 @@
 <template>
   <div class="css">
-    <div class="css-container">
-      <pre class="pre-code"></pre>
+    <div class="css-container js-css-container">
+      <pre class="pre-code" v-html="styleMsg"></pre>
     </div>
 
   </div>
@@ -12,7 +12,15 @@ export default {
   name: 'css',
   data () {
     return {
-     
+      styleMsg: ""
+    }
+  },
+  methods: {
+    writeStyleCode: function (code) {
+          this.styleMsg = code;
+          // 每写一行 code ，滚动条滚动到最下面
+          document.getElementsByClassName('js-css-container')[0].scrollTop = 
+          document.getElementsByClassName('js-css-container')[0].scrollHeight;
     }
   }
 }
@@ -30,6 +38,7 @@ export default {
     height: 100%;
     border-radius: 4px;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.5);
+    overflow: auto;
   }
   .pre-code{
      height: 100%;

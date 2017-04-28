@@ -52,12 +52,12 @@
   			<div class="work-exp">
   				<label class="title">工作经历</label>
   				<div class="work-exp-title">
-  					<label class="title-name">科技谷</label>
-					<div class="title-date">2015.11 - 2017.04</div>
-  				</div>
-  				<div class="work-exp-title">
   					<label class="title-name">德医互联</label>
 					<div class="title-date">2017.04 - 至今</div>
+  				</div>
+  				<div class="work-exp-title">
+  					<label class="title-name">科技谷</label>
+					<div class="title-date">2015.11 - 2017.04</div>
   				</div>	
   			</div>
   			<div class="project-exp">
@@ -80,16 +80,22 @@
   			</div>
   		</div>
   	</div>
+  	<div v-html="resStyleCode"></div>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-     
-    }
-  }
+  	data () {
+    	return {
+     		resStyleCode: ''
+    	}
+  	},
+  	methods:{
+	    writeRsesumeCss: function (code) {
+	        this.resStyleCode = "<style>"+code+"</style>"
+	    }
+	}
 }
 </script>
 
@@ -113,7 +119,7 @@ export default {
 	}
 
 	/*简历左侧*/
-	.resume-left{
+/*	.resume-left{
 		width: 40%;
 		float:left;
 		height: 100%;
@@ -121,6 +127,7 @@ export default {
 		box-sizing: border-box;
 		background: #ececec;
 		border-right: 1px solid #e9e9e9;
+		overflow: auto;
 	}
 	.resume-left .name{
 		text-align: center;
@@ -171,19 +178,34 @@ export default {
 		height: 18px;
 		background: rgba(151, 151, 151, 0.9);
 		border-radius: 4px;
-	}
+	}*/
 
 
 	/*简历右侧*/
-	.resume-right{
+	/*.resume-right{
 		width: 60%;
 		float:right;
 		height: 100%;
 		padding: 15px;
 		box-sizing: border-box;
+		overflow: auto;
 	}
 	.resume-right .blog{
 		text-align: right;
 	}
-
+	.resume-right .work-exp{
+		margin-top: 15px;
+	}
+	.resume-right .work-exp .work-exp-title{
+		padding: 15px 15px 0 15px;
+	}
+	.resume-right .work-exp .title-date{
+		float: right;;
+	}
+	.resume-right .project-exp{
+		margin-top: 15px;
+	}
+	.resume-right .project-exp .project-exp-container{
+		padding: 15px 15px 0 15px;
+	}*/
 </style>
