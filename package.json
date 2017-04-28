@@ -1,8 +1,8 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "ganfubin",
+  "description": "vue 简历动态书写状态",
+  "author": "ganfubin 1209711358@qq.com",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
