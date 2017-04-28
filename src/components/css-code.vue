@@ -28,13 +28,11 @@ export default {
   }
   .css-container{
     height: 100%;
-    
-
+    border-radius: 4px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.5);
   }
   .pre-code{
      height: 100%;
-     border-radius: 4px;
-     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.5);
      margin: 0;
   }
 
